@@ -1,0 +1,84 @@
+# =========================================================
+# Kilo Ignore Rules for Volcano
+# 目标：
+# - 保留 Scheduler / CRD / Docs / Roadmap
+# - 忽略第三方、测试、脚本、CI、生成文件
+# - 降低 Snapshot 与 Index 开销
+# =========================================================
+
+
+# ========================
+# VCS / IDE / Metadata
+# ========================
+.git/
+.github/
+.vscode/
+
+
+# ========================
+# Third-party / External
+# 外部依赖与许可证，不参与调度逻辑理解
+# ========================
+third_party/
+licenses/
+
+
+# ========================
+# Benchmarks / Tests
+# 大量测试与性能数据，默认忽略
+# 如需分析测试可删除对应规则
+# ========================
+benchmark/
+test/
+
+
+# ========================
+# Examples / Packaging
+# 示例与安装脚本价值较低
+# ========================
+example/
+installer/
+
+
+# ========================
+# Helper Scripts
+# 构建、发布、CI 辅助脚本
+# ========================
+hack/
+
+
+# ========================
+# Generated / Build Artifacts
+# ========================
+_output/
+bin/
+dist/
+tmp/
+coverage/
+
+*.out
+*.test
+coverage.out
+
+
+# ========================
+# Documentation Artifacts
+# 自动生成文档忽略
+# 保留 docs/*.md
+# ========================
+docs/generated/
+docs/site/
+
+
+# =========================================================
+# 保留给 Kilo 分析的重要目录（不要忽略）
+#
+# cmd/        → 启动入口
+# pkg/        → Scheduler 核心实现
+# defs/       → API / CRD 定义
+# config/     → 配置
+# staging/    → 扩展 API
+# docs/       → 架构、Roadmap、设计文档
+# README.md   → 总览
+# CHANGELOG*  → 演进历史
+# =========================================================

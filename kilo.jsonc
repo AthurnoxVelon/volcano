@@ -1,0 +1,29 @@
+{
+  "exclude": [
+    ".git",
+    "docs",
+    "benchmark",
+    "example",
+    "installer",
+    "licenses",
+    "test",
+    "vendor",
+    "third_party",
+
+    "**/*.md",
+    "**/*.yaml",
+    "**/*.png",
+    "**/*.svg"
+  ],
+
+  "include": [
+    "cmd/**/*.go",
+    "pkg/**/*.go",
+    "staging/**/*.go"
+  ],
+
+  "chunkSize": 1200,
+  "chunkOverlap": 200,
+
+  "maxIndexedFiles": 10000
+}
